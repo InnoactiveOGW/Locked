@@ -15,7 +15,14 @@ namespace NewtonVR
         glass,
         plastic,
         cardboard,
-        EndNewtonVRMaterials = 50, //your custom collision sound materials go below here. That way if NewtonVR adds more we don't overwrite yours.
+		EndNewtonVRMaterials = 50, //your custom collision sound materials go below here. That way if NewtonVR adds more we don't overwrite yours.
+		furniture_meuble,
+		furniture_metal,
+		key,
+		mirror,
+		Wood_Planks,
+		MMGF_RoughStoneWallMat
+
     }
 
     public class NVRCollisionSoundMaterialsList
