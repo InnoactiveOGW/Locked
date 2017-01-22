@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Valve.VR;
+using NewtonVR;
 
 [AddComponentMenu("Vive Teleporter/Vive Teleporter")]
 [RequireComponent(typeof(Camera), typeof(BorderRenderer))]
@@ -156,6 +157,8 @@ public class TeleportVive : MonoBehaviour {
                 {
                     // We have finished fading in
                     Teleporting = false;
+					//ActiveController.GetComponent<NVRHand> ().OnTeleportEnd ();
+					//ActiveController = null;
                 } else
                 {
                     // We have finished fading out - time to teleport!
@@ -190,10 +193,11 @@ public class TeleportVive : MonoBehaviour {
                     // Begin teleport sequence
                     Teleporting = true;
                     TeleportTimeMarker = Time.time;
+					//ActiveController.GetComponent<NVRHand> ().OnTeleportStart ();
                 }
                 
                 // Reset active controller, disable pointer, disable visual indicators
-                ActiveController = null;
+				ActiveController = null;
                 Pointer.enabled = false;
                 RoomBorder.enabled = false;
                 //RoomBorder.Transpose = Matrix4x4.TRS(OriginTransform.position, Quaternion.identity, Vector3.one);

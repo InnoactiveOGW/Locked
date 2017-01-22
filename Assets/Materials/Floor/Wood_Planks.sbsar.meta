@@ -10,7 +10,7 @@ labels:
 - material
 - procedural
 - substance
-timeCreated: 1481387658
+timeCreated: 1483270192
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -100,7 +100,7 @@ SubstanceImporter:
       - first:
           name: _BumpMap
         second:
-          texture: {instanceID: 0}
+          texture: {fileID: 2800000, guid: 094d7dae7a25a3b43b9bc93b261aeead, type: 3}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - first:
@@ -130,31 +130,31 @@ SubstanceImporter:
       - first:
           name: _MainTex
         second:
-          texture: {instanceID: 0}
+          texture: {fileID: 2800000, guid: dcc49e8c526903947a044cb1a14913ef, type: 3}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _MetallicGlossMap
         second:
-          texture: {instanceID: 0}
+          texture: {fileID: 2800000, guid: 78c0431a52347084d910ea2c1f04d918, type: 3}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _OcclusionMap
         second:
-          texture: {instanceID: 0}
+          texture: {fileID: 2800000, guid: 8abf103b22e6374469653daf21478da8, type: 3}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       - first:
           name: _ParallaxMap
         second:
-          texture: {instanceID: 0}
+          texture: {fileID: 2800000, guid: a83b09ec74c1b5a438de4735b4d04163, type: 3}
           scale: {x: 1, y: 1}
           offset: {x: 0, y: 0}
       floats:
       - first:
           name: _BumpScale
-        second: 1
+        second: 4
       - first:
           name: _Cull
         second: 2
@@ -187,7 +187,7 @@ SubstanceImporter:
         second: 1
       - first:
           name: _Parallax
-        second: 0.02
+        second: 0.08
       - first:
           name: _Phi0
         second: 0
@@ -308,23 +308,7 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    textureAssignments:
-    - shaderProp:
-        name: _MainTex
-      material: {instanceID: 0}
-      baseUID: 1978675382
-    - shaderProp:
-        name: _BumpMap
-      material: {instanceID: 0}
-      baseUID: 1978675380
-    - shaderProp:
-        name: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 1978675376
-    - shaderProp:
-        name: _ParallaxMap
-      material: {instanceID: 0}
-      baseUID: 2006633389
+    textureAssignments: []
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 

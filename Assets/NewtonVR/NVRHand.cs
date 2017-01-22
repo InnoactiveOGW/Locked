@@ -8,7 +8,9 @@ namespace NewtonVR
 {
     public class NVRHand : MonoBehaviour
     {
-        public NVRButtons HoldButton = NVRButtons.Grip;
+		private Vector3 lastRelativePosition;
+
+		public NVRButtons HoldButton = NVRButtons.Grip;
         public bool HoldButtonDown = false;
         public bool HoldButtonUp = false;
         public bool HoldButtonPressed = false;
@@ -96,6 +98,25 @@ namespace NewtonVR
                 return false;
             }
         }
+
+		public void OnTeleportStart ()
+		{
+			if (IsInteracting)
+			{
+				//we're about to move our controller - store our item's relative position
+				lastRelativePosition = transform.InverseTransformPoint(CurrentlyInteracting.Rigidbody.position);
+			}
+		}
+
+		public void OnTeleportEnd ()
+		{
+			//our controller was just moved - update any objects we're holding to the new position
+			if (IsInteracting)
+			{
+				Vector3 newPosition = transform.TransformPoint(lastRelativePosition);
+				CurrentlyInteracting.Rigidbody.MovePosition(newPosition);
+			}
+		}
 
 
         public virtual void PreInitialize(NVRPlayer player)

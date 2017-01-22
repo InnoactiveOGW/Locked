@@ -6,7 +6,7 @@ namespace NewtonVR
 {
     public class NVRLetterSpinner : NVRInteractableRotator
     {
-        private static string LETTERLIST = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
+        private static string LETTERLIST = "123456789";
 
         private float SnapDistance = 1f;
         private float RungAngleInterval;
@@ -71,10 +71,10 @@ namespace NewtonVR
             if (this.transform.localEulerAngles.z < 0.3)
                 closest = LETTERLIST.Length - closest;
 
-            if (closest == 27) //hack
+            if (closest == 9) //hack
                 closest = 0;
             if (closest == -1)
-                closest = 26;
+                closest = 8;
 
             string character = LETTERLIST.Substring(closest, 1);
 
